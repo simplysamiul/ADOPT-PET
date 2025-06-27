@@ -1,0 +1,18 @@
+/* categories section */
+.category-pet{
+    border: 1px solid #0e7981a8;
+    border-radius: 10px;
+    transition: 0.3s ease-out;
+}
+.category-pet:hover{
+    background: #0e79812c;
+}
+
+/* pet single card */
+.card-footer-btn{
+    color: #0e7981;
+    border: 1px solid #0e798142;
+}
+.card-footer-btn:hover{
+    background: #0e79812c;
+}

@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./resource/logo.webp" type="image/x-icon">
+    <title>ADOPT-PET</title>
+    <!-- tailwind css CDN  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisy ui CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/5e3ca26da2.js" crossorigin="anonymous"></script>
+    <!-- css file -->
+     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
-    
+    <!-- Navigation section -->
+    <nav class="w-11/12 mx-auto py-4">
+        <div class="flex items-center justify-between">
+            <div class="log flex items-center justify-center">
+                <img src="./resource/logo.webp" alt="logo">
+                <h3 class="font-bold ml-2 text-2xl">Peddy</h3>
+            </div>
+            <div class="text-gray-500">
+                <a class="mx-2" href="">Home</a>
+                <a class="mx-2" href="">Shop</a>
+                <a class="mx-2" href="">Contact</a>
+            </div>
+            <div
+                class="text-gray-500 border-1 w-8 h-8 border-[#0e79817c] rounded-full flex items-center justify-center">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- header Section -->
+    <header class="w-11/12 mx-auto py-4 text-center">
+        <p class="flex items-center justify-center text-gray-400">Bringing Families Together
+            <span>
+                <img class="w-6 ml-2" src="https://img.icons8.com/?size=48&id=QV5JEtrTP6nH&format=png" alt="Fire">
+            </span>
+        </p>
+        <h2 class="font-bold text-6xl my-4">Your Path to Adoption <br> Starts Here</h2>
+        <p class="w-3/5 mx-auto my-4 text-gray-500">It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+        </p>
+        <img class="mx-auto" src="./resource/pet.webp" alt="pet">
+        <h3 class="font-bold text-3xl">Adopt Your Best Friend</h3>
+        <p class="w-3/5 mx-auto mt-2 text-gray-500">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+        </p>
+        <a href="#main-body" class="bg-[#0E7A81] btn rounded-lg font-semibold text-white my-8">View More</a>
+    </header>
+
+    <!-- main section -->
+    <main class="w-11/12 mx-auto" id="main-body">
+        <!-- show display categories pet -->
+         <div id="categoried-pet" class="w-4/5 mx-auto grid grid-cols-4 py-6"></div>
+         <!-- short by price -->
+          <div class="flex items-center justify-between my-6">
+            <h2 class="font-bold text-xl">Best Deal For you</h2>
+            <button class="bg-[#0E7A81] btn rounded-lg font-semibold text-white">Sort by Price</button>
+          </div>
+         <!-- display all pet and selected pet -->
+          <div class="grid grid-cols-4 gap-4">
+            <!-- display pets -->
+             <div id="all-pet-container" class="col-span-3 grid grid-cols-3 gap-4"></div>
+          </div>
+
+    </main>
+
+
+
+    <!-- js script file -->
+    <script src="./script/index.js"></script>
 </body>
+
 </html>
