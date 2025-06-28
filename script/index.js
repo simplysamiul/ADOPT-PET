@@ -8,9 +8,20 @@ const loadPetData = () => {
     // get all pets data
     fetch("https://openapi.programming-hero.com/api/peddy/pets")
         .then(res => res.json())
-        .then(data => allPets(data.pets))
+        .then(data => {allPets(data.pets)})
         .catch(err => console.log(err))
 };
+// sort data 
+const sortPrice = () =>{
+    fetch("https://openapi.programming-hero.com/api/peddy/pets")
+        .then(res => res.json())
+        .then(data => {
+            const pets = data.pets;
+            pets.sort((a, b) => parseInt(a.price) - parseInt(b.price))
+            allPets(pets)
+        })
+        .catch(err => console.log(err))
+}
 
 // display specific pet data
 const singlePet = (id, btn) => {
@@ -109,7 +120,6 @@ const petDetails = (pet) => {
 
 // display all pets data
 const allPets = (pets) => {
-    console.log(pets.length)
     const allPetContainr = document.getElementById("all-pet-container");
     allPetContainr.innerHTML = "";
     if(pets.length === 0){
@@ -119,7 +129,7 @@ const allPets = (pets) => {
             <h2 class="font-bold text-center text-3xl mb-10">No Information Available</h2>
         `
     }else{
-
+     allPetContainr.classList.add("grid");   
     }
     pets.forEach(pet => {
         const { image, gender, date_of_birth: bod, breed, petId, pet_name, price } = pet;
