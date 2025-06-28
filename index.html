@@ -15,7 +15,7 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/5e3ca26da2.js" crossorigin="anonymous"></script>
     <!-- css file -->
-     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
@@ -50,7 +50,8 @@
         </p>
         <img class="mx-auto" src="./resource/pet.webp" alt="pet">
         <h3 class="font-bold text-3xl">Adopt Your Best Friend</h3>
-        <p class="w-3/5 mx-auto mt-2 text-gray-500">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+        <p class="w-3/5 mx-auto mt-2 text-gray-500">It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
         </p>
         <a href="#main-body" class="bg-[#0E7A81] btn rounded-lg font-semibold text-white my-8">View More</a>
     </header>
@@ -58,19 +59,39 @@
     <!-- main section -->
     <main class="w-11/12 mx-auto" id="main-body">
         <!-- show display categories pet -->
-         <div id="categoried-pet" class="w-4/5 mx-auto grid grid-cols-4 py-6"></div>
-         <!-- short by price -->
-          <div class="flex items-center justify-between my-6">
+        <div id="categoried-pet" class="w-4/5 mx-auto grid grid-cols-4 py-6"></div>
+        <!-- short by price -->
+        <div class="flex items-center justify-between my-6">
             <h2 class="font-bold text-xl">Best Deal For you</h2>
             <button class="bg-[#0E7A81] btn rounded-lg font-semibold text-white">Sort by Price</button>
-          </div>
-         <!-- display all pet and selected pet -->
-          <div class="grid grid-cols-4 gap-4">
+        </div>
+        <!-- display all pet and selected pet -->
+        <div class="grid grid-cols-4 gap-4">
             <!-- display pets -->
-             <div id="all-pet-container" class="col-span-3 grid grid-cols-3 gap-4"></div>
-          </div>
+            <div id="all-pet-container" class="col-span-3 grid grid-cols-3 gap-4"></div>
+            <!-- Display sectected pet -->
+            <div class="col-span-1 border-1 border-gray-200 rounded-md p-2">
+                <div id="selected-pet-container" class="grid grid-cols-2 gap-2 p-2"></div>
+            </div>
+        </div>
+        <!-- show pet details -->
+        <!-- Open the modal using ID.showModal() method -->
+        <button id="details-btn" class="btn hidden" onclick="showModalData.showModal()">open modal</button>
+        <dialog id="showModalData" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="modal-content">
 
+                </div>
+                <!-- <div class="modal-action"> -->
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn w-full mt-4" id="modal-close">Cancel</button>
+                    </form>
+                <!-- </div> -->
+            </div>
+        </dialog>
     </main>
+    
 
 
 

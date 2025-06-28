@@ -8,6 +8,12 @@
     background: #0e79812c;
 }
 
+#modal-close{
+    background: #0e79812c;
+    color: #0e7981;
+    border: none;
+}
+
 /* pet single card */
 .card-footer-btn{
     color: #0e7981;
